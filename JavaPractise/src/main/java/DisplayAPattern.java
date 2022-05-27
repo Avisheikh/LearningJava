@@ -33,6 +33,7 @@ public class DisplayAPattern{
 
     }
 
+
     public static void main(String args[]){
 
         DisplayAPattern display = new DisplayAPattern();
