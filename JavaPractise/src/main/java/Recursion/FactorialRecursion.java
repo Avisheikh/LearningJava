@@ -28,6 +28,7 @@ public class FactorialRecursion {
         System.out.println(String.format("The real power number of %d is %d",x,xPower(x,n)));
 
         System.out.println(String.format("The power number for loop of 2 is %d",xForPower(n)));
+        System.out.println(String.format("The compute positive number of %d is %d",n,computePositiveNumber(n)));
     }
 
     private static int facto(int n) {
@@ -84,5 +85,13 @@ public class FactorialRecursion {
             result = base * result;
         }
         return result;
+    }
+
+    private static int computePositiveNumber(int n) {
+        if (n == 0) {
+            return 0;
+        } else {
+            return n + computePositiveNumber(n-1);
+        }
     }
 }
