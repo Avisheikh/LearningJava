@@ -6,7 +6,7 @@ import java.util.Scanner;
     Author       :- Avi-sheikh 
     Created Date :- 01/11/2022 
 */
-public class FactorialRecursion {
+public class RecursionExample {
 
     public static void main(String[] args) {
 
@@ -18,18 +18,27 @@ public class FactorialRecursion {
         Scanner input2 = new Scanner(System.in);
         int x = input2.nextInt();
 
+        System.out.println("Please enter fibonacci number: ");
+        Scanner input3 = new Scanner(System.in);
+        long index = input3.nextLong();
+
         //display factorial
-        System.out.println(String.format("The multiplication factorial number of %d is %d",n,facto(n)));
-        System.out.println(String.format("The additional factorial number of %d is %d",n,xMethod(n)));
+//        System.out.println(String.format("The multiplication factorial number of %d is %d",n,facto(n)));
+//        System.out.println(String.format("The additional factorial number of %d is %d",n,xMethod(n)));
 
 
        // xDivide(1234567);
-        System.out.println(String.format("The power number of 2 is %d",xPower(n)));
-        System.out.println(String.format("The real power number of %d is %d",x,xPower(x,n)));
-
-        System.out.println(String.format("The power number for loop of 2 is %d",xForPower(n)));
-        System.out.println(String.format("The compute positive number of %d is %d",n,computePositiveNumber(n)));
+//        System.out.println(String.format("The power number of 2 is %d",xPower(n)));
+//        System.out.println(String.format("The real power number of %d is %d",x,xPower(x,n)));
+//
+//        System.out.println(String.format("The power number for loop of 2 is %d",xForPower(n)));
+//        System.out.println(String.format("The compute positive number of %d is %d",n,computePositiveNumber(n)));
+//        System.out.println(String.format("The fibonacci number for %d is %d.",index,fibo(index)));
+//        nMinusOne(n);
+//        nMinusOne2(n);
+        wrong(n);
     }
+
 
     private static int facto(int n) {
 
@@ -94,4 +103,38 @@ public class FactorialRecursion {
             return n + computePositiveNumber(n-1);
         }
     }
+
+    private static long fibo(long index) {
+        if (index == 0) {
+            return 0;
+        }
+        else if (index == 1) {
+            return 1;
+        } else {
+            return fibo(index - 1) + fibo(index - 2);
+        }
+    }
+
+    private static void nMinusOne(int n) {
+        if (n > 0) {
+            System.out.println(n + " ");
+            nMinusOne(n-1);
+        }
+    }
+
+    private static void nMinusOne2(int n) {
+        if (n > 0) {
+            nMinusOne2(n-1);
+            System.out.println(n + "");
+        }
+    }
+
+    // What is wrong in the following methods.
+    public static void wrong(double n) {
+        if(n != 0) {
+            System.out.println(n);
+            wrong(n / 10);
+        }
+    }
+
 }
