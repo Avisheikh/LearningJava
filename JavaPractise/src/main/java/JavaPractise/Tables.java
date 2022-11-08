@@ -1,4 +1,4 @@
-// Write a program that displays the following table:
+package JavaPractise;// Write a program that displays the following table:
 
     //a a^2 a^3
     //1  1   1

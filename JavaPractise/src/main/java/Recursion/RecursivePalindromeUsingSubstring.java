@@ -1,0 +1,44 @@
+package Recursion;
+
+/*
+    Author       :- Avi-sheikh 
+    Created Date :- 07/11/2022 
+*/
+public class RecursivePalindromeUsingSubstring {
+
+//    public static boolean isPalindrome(String s) {
+//        if(s.length() <= 1) {
+//            return true;
+//        } else if (s.charAt(0) != s.charAt(s.length() -1)) {
+//            return false;
+//        }
+//        else return isPalindrome(s.substring(1, s.length() - 1));
+//    }
+
+    public static boolean isPalindrome(String s) {
+        return isPalindrome(s,0,s.length()-1);
+    }
+
+    public static boolean isPalindrome(String s, int low, int high) {
+        if (high <= low) {
+            return true;
+        } else if (s.charAt(low) != s.charAt(high)) {
+            return false;
+        } else {
+            return isPalindrome(s , low + 1, high - 1);
+        }
+    }
+
+    public static void main(String[] args) {
+        System.out.println("Is moon a palindrome? "
+                + isPalindrome("moon"));
+        System.out.println("Is noon a palindrome? "
+                + isPalindrome("noon"));
+        System.out.println("Is a a palindrome? " + isPalindrome("a"));
+        System.out.println("Is aba a palindrome? " +
+                isPalindrome("aba"));
+        System.out.println("Is ab a palindrome? " + isPalindrome("ab"));
+        System.out.println("Is abcba a palindrome? " + isPalindrome("abcba"));
+    }
+
+}
