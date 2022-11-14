@@ -9,7 +9,7 @@ public class SelectionSort {
     public static void main(String[] args) {
         int[] lists = {2, 9, 5, 4, 8, 1, 6};
 
-        double[] doubleList = {1, 9, 4.5, 6.6, 5.7, -4.5};
+        double[] doubleList = {1, 9, -4.5, 6.6, 5.7, -4.5};
 
         selectionSort(lists);
         doubleSelectionSort(doubleList);
